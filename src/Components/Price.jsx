@@ -19,7 +19,7 @@ export default function Price() {
           <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
             <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <h3 className="text-xl font-bold text-center mb-2">Basic</h3>
-              <p className="text-center text-gray-500 mb-4">$500.00</p>
+              <p className="text-center text-gray-500 mb-4">Rs.10,000</p>
               <ul className="list-disc space-y-2 px-4">
                 <li>Basic Decoration</li>
                 <li>Background Music</li>
@@ -31,7 +31,7 @@ export default function Price() {
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <h3 className="text-xl font-bold text-center mb-2">Prime</h3>
-              <p className="text-center text-gray-500 mb-4">$600.00</p>
+              <p className="text-center text-gray-500 mb-4">Rs.25,000</p>
               <ul className="list-disc space-y-2 px-4">
                 <li>Premium Decoration</li>
                 <li>DJ Music</li>
@@ -43,7 +43,7 @@ export default function Price() {
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <h3 className="text-xl font-bold text-center mb-2">Luxury</h3>
-              <p className="text-center text-gray-500 mb-4">$800.00</p>
+              <p className="text-center text-gray-500 mb-4">Rs.50,000</p>
               <ul className="list-disc space-y-2 px-4">
                 <li>Luxury Decoration</li>
                 <li>Live Band</li>
@@ -56,7 +56,7 @@ export default function Price() {
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
               <h3 className="text-xl font-bold text-center mb-2">Ultra</h3>
-              <p className="text-center text-gray-500 mb-4">$1000.00</p>
+              <p className="text-center text-gray-500 mb-4">Rs.1,00,000</p>
               <ul className="list-disc space-y-2 px-4">
                 <li>Ultra Luxury Decoration</li>
                 <li>Celebrity DJ/Band</li>
