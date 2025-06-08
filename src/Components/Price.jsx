@@ -9,69 +9,92 @@ export default function Price() {
   };
 
   return (
-    <div className="bg-gray-900">
-      
-      <section className="home flex items-center justify-center min-h-screen bg-cover bg-center" id="home" style={{ backgroundImage: "url('https://kingsolomonscatering.com/wp-content/uploads/2022/11/bunch-flowers-leaves-table.jpg')" }}>
-        <div className="absolute top-24 left-1/2 transform -translate-x-1/2 bg-black bg-opacity-50 rounded-lg p-4">
-          <h2 className="text-4xl font-bold text-pink-500">Our Prices</h2>
+    <div className="bg-gray-900 min-h-screen">
+      <section
+        id="home"
+        className="relative flex flex-col items-center justify-center min-h-screen bg-cover bg-center px-4 py-24 md:py-32"
+        style={{
+          backgroundImage:
+            "url('https://kingsolomonscatering.com/wp-content/uploads/2022/11/bunch-flowers-leaves-table.jpg')",
+        }}
+      >
+        {/* Title with semi-transparent background */}
+        <div className="bg-black bg-opacity-60 rounded-lg px-6 py-4 mb-12  max-w-4xl text-center">
+          <h2 className="text-3xl md:text-4xl font-bold text-pink-500">Our Prices</h2>
         </div>
-        <div className="container mx-auto px-4 py-16" style={{ marginTop: "100px" }}>
-          <div className="grid grid-cols-1 md:grid-cols-4 gap-4">
-            <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <h3 className="text-xl font-bold text-center mb-2">Basic</h3>
-              <p className="text-center text-gray-500 mb-4">Rs.10,000</p>
-              <ul className="list-disc space-y-2 px-4">
-                <li>Basic Decoration</li>
-                <li>Background Music</li>
-                <li>Standard Photography</li>
-                <li>Buffet Snacks</li>
-                <li>Basic Invitation Card</li>
+
+        {/* Cards container */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8 max-w-7xl w-full">
+          {[
+            {
+              title: 'Basic',
+              price: 'Rs.10,000',
+              features: [
+                'Basic Decoration',
+                'Background Music',
+                'Standard Photography',
+                'Buffet Snacks',
+                'Basic Invitation Card',
+              ],
+            },
+            {
+              title: 'Moderate',
+              price: 'Rs.25,000',
+              features: [
+                'Premium Decoration',
+                'DJ Music',
+                'Professional Photography',
+                'Full Course Meal',
+                'Custom Invitation Card',
+              ],
+            },
+            {
+              title: 'Prime',
+              price: 'Rs.50,000',
+              features: [
+                'Luxury Decoration',
+                'Live Band',
+                'Exclusive Photography & Videography',
+                'Gourmet Dining',
+                'Luxury Invitation Card',
+                'Event Planning Consultation',
+              ],
+            },
+            {
+              title: 'Ultra',
+              price: 'Rs.1,00,000',
+              features: [
+                'Ultra Luxury Decoration',
+                'Celebrity DJ/Band',
+                'Exclusive Photography & Cinematography',
+                'Five-Star Catering',
+                'Custom Designed Invitation Card',
+                'Comprehensive Event Planning',
+                'VIP Guest Services',
+              ],
+            },
+          ].map(({ title, price, features }) => (
+            <div
+              key={title}
+              className="bg-white rounded-lg shadow-md flex flex-col p-6 transform transition-transform duration-300 hover:scale-105 hover:shadow-xl"
+            >
+              <h3 className="text-xl font-bold text-center mb-2">{title}</h3>
+              <p className="text-center text-gray-500 mb-4">{price}</p>
+              <ul className="list-disc list-inside space-y-2 mb-6 flex-grow px-2">
+                {features.map((feature) => (
+                  <li key={feature}>{feature}</li>
+                ))}
               </ul>
-              <button onClick={handleBuyNow} className="mt-32 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700">Buy Now</button>
+              <button
+                onClick={handleBuyNow}
+                className="mt-auto bg-pink-500 text-white font-bold rounded-lg py-2 hover:bg-pink-700 transition"
+              >
+                Buy Now
+              </button>
             </div>
-            <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <h3 className="text-xl font-bold text-center mb-2">Moderate</h3>
-              <p className="text-center text-gray-500 mb-4">Rs.25,000</p>
-              <ul className="list-disc space-y-2 px-4">
-                <li>Premium Decoration</li>
-                <li>DJ Music</li>
-                <li>Professional Photography</li>
-                <li>Full Course Meal</li>
-                <li>Custom Invitation Card</li>
-              </ul>
-              <button onClick={handleBuyNow} className="mt-32 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700">Buy Now</button>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <h3 className="text-xl font-bold text-center mb-2">Prime</h3>
-              <p className="text-center text-gray-500 mb-4">Rs.50,000</p>
-              <ul className="list-disc space-y-2 px-4">
-                <li>Luxury Decoration</li>
-                <li>Live Band</li>
-                <li>Exclusive Photography & Videography</li>
-                <li>Gourmet Dining</li>
-                <li>Luxury Invitation Card</li>
-                <li>Event Planning Consultation</li>
-              </ul>
-              <button onClick={handleBuyNow} className="mt-20 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700">Buy Now</button>
-            </div>
-            <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <h3 className="text-xl font-bold text-center mb-2">Ultra</h3>
-              <p className="text-center text-gray-500 mb-4">Rs.1,00,000</p>
-              <ul className="list-disc space-y-2 px-4">
-                <li>Ultra Luxury Decoration</li>
-                <li>Celebrity DJ/Band</li>
-                <li>Exclusive Photography & Cinematography</li>
-                <li>Five-Star Catering</li>
-                <li>Custom Designed Invitation Card</li>
-                <li>Comprehensive Event Planning</li>
-                <li>VIP Guest Services</li>
-              </ul>
-              <button onClick={handleBuyNow} className="mt-4 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700">Buy Now</button>
-            </div>
-          </div>
+          ))}
         </div>
       </section>
     </div>
   );
 }
-
