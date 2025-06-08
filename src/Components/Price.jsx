@@ -30,7 +30,7 @@ export default function Price() {
               <button onClick={handleBuyNow} className="mt-32 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700">Buy Now</button>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <h3 className="text-xl font-bold text-center mb-2">Prime</h3>
+              <h3 className="text-xl font-bold text-center mb-2">Moderate</h3>
               <p className="text-center text-gray-500 mb-4">Rs.25,000</p>
               <ul className="list-disc space-y-2 px-4">
                 <li>Premium Decoration</li>
@@ -42,7 +42,7 @@ export default function Price() {
               <button onClick={handleBuyNow} className="mt-32 px-4 py-2 bg-pink-500 text-white font-bold rounded-lg hover:bg-pink-700">Buy Now</button>
             </div>
             <div className="p-6 bg-white rounded-lg shadow-md transform transition-transform duration-300 hover:scale-105 hover:shadow-xl">
-              <h3 className="text-xl font-bold text-center mb-2">Luxury</h3>
+              <h3 className="text-xl font-bold text-center mb-2">Prime</h3>
               <p className="text-center text-gray-500 mb-4">Rs.50,000</p>
               <ul className="list-disc space-y-2 px-4">
                 <li>Luxury Decoration</li>
